@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilikoy Webpage - Login</title>
+    <style>
+        :root {
+            --primary-green-light: #33cc33; /* Light green for light mode */
+            --primary-green-dark: #2e8b57; /* Dark green for dark mode */
+            --background-dark: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            --text-color-light: #ffffff;
+            --text-color-dark: #000000;
+            --button-background-light: #33cc33;
+            --button-background-dark: #2e8b57;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-color-light);
+            background-image: url('image/anonymous.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000000; /* Fallback color */
+        }
+
+        .login-container {
+            background-color: var(--background-dark);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: var(--primary-green-light);
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            color: var(--primary-green-light);
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px); /* Adjust input width */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333;
+            color: var(--text-color-light);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .login-container button {
+            width: calc(100% - 20px); /* Adjust button width */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--button-background-light);
+            color: var(--text-color-dark);
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .login-container button:hover {
+            background-color: var(--primary-green-dark); /* Slightly darker green for hover effect */
+        }
+
+        .login-container .options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .login-container .options a {
+            color: var(--primary-green-light);
+            text-decoration: none;
+        }
+
+        .login-container .options a:hover {
+            text-decoration: underline;
+        }
+
+        .login-container .error-message {
+            color: #ff0000;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        #togglePassword {
+            position: absolute;
+            margin-left: -30px;
+            margin-top: -38px;
+            cursor: pointer;
+        }
+
+        /* Dark mode adjustments */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-green-light: #66ff66; /* Light green for dark mode */
+                --primary-green-dark: #4caf50; /* Dark green for dark mode */
+                --background-dark: rgba(0, 0, 0, 0.8);
+                --text-color-light: #ffffff;
+                --text-color-dark: #000000;
+                --button-background-light: #66ff66;
+                --button-background-dark: #4caf50;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>BilikoyWeb Login Page</h1>
+        <div id="error-message" class="error-message"></div>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="togglePassword" class="toggle-password">👁️</span>
+            
+            <button type="submit">Login</button>
+            <div class="options">
+                <a href="forgot_passwd.html">Forgot password?</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

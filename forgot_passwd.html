@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Bilikoy Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .forgot-password-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .forgot-password-container img {
+            width: 100px; /* Adjust the width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        .forgot-password-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+
+        .forgot-password-container p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .forgot-password-container label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            color: #333333;
+        }
+
+        .forgot-password-container input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .forgot-password-container button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #33cc33;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .forgot-password-container button:hover {
+            background-color: #2e8b57;
+        }
+
+        .forgot-password-container a {
+            display: block;
+            margin-top: 20px;
+            color: #33cc33;
+            text-decoration: none;
+        }
+
+        .forgot-password-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <img src="image/1076441.jpg" alt="Logo"> <!-- Image added here -->
+        <h2>Forgot Your Password?</h2>
+        <p>Please enter your email address to reset your password.</p>
+        <form action="reset_password.php" method="post">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Reset Password</button>
+        </form>
+        <a href="website.html">Back to Login</a>
+    </div>
+</body>
+</html>
